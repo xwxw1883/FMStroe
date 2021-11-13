@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.fmstroe.dao.UserDao">
+<!--    useGeneratedKeys="true" keyProperty="id"返回主键-->
+<!--    values (#{XXXX}, #{XXX}) 需要用花括号隔起来了-->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into user(name, password)
+        values (#{name}, #{password})
+    </insert>
+</mapper>
